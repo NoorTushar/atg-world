@@ -11,7 +11,7 @@ const Banner = () => {
          {/* Overlay */}
          <div className="absolute w-full h-full bg-black bg-opacity-60 pointer-events-none"></div>
          {/* Banner Contents */}
-         <div className="z-10 h-full absolute pl-6 pb-6  md:pl-40 md:pb-20">
+         <div className="z-10 h-full absolute pb-10  md:pl-40 md:pb-20">
             <div className="text-white text-start flex flex-col items-start justify-end h-full  px-6  ">
                <h1 className="text-[36px] font-bold">Computer Engineering</h1>
                <p className="text-lg text-white">
