@@ -411,7 +411,10 @@ const Posts = () => {
             {/* sidebar */}
             <div className="p-8 hidden lg:block col-span-2 text-center">
                <div className="relative">
-                  <input className=" border-b outline-none px-4 py-2 pl-4 text-sm" />
+                  <input
+                     className=" border-b outline-none px-4 py-2 pl-4 text-s"
+                     placeholder="Enter your location"
+                  />
                   <MdOutlineLocationOn className="absolute text-xl top-1/2 -translate-y-1/2" />
                   <FaPencilAlt className="absolute top-1/2 right-0 -translate-y-1/2 text-sm" />
                </div>
