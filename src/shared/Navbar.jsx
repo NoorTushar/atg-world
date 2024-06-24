@@ -3,7 +3,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 const Navbar = () => {
    return (
       <div>
-         <div className="navbar bg-base-100 md:px-10">
+         <div className="navbar bg-base-100 md:px-10 w-full">
             <div className="navbar-start">
                <div className="dropdown">
                   <div
@@ -53,8 +53,8 @@ const Navbar = () => {
                   <img src={logo} alt="logo" />
                </a>
             </div>
-            <div className="navbar-center hidden  lg:flex">
-               <div className=" flex items-center w-96 gap-4 p-3 px-6 rounded-full bg-[#F2F2F2]">
+            <div className="navbar-center hidden lg:flex py-2">
+               <div className=" flex items-center w-96 gap-4 p-2 px-4 rounded-full bg-[#F2F2F2]">
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
                      className="h-5 w-5"
@@ -71,7 +71,7 @@ const Navbar = () => {
                   </svg>
                   <input
                      type="text"
-                     className="w-full bg-[#F2F2F2] border-none text-[#5C5C5C]"
+                     className="w-full outline-none bg-[#F2F2F2] border-none text-[#5C5C5C]"
                      placeholder="Search for your favorite groups in ATG"
                   />
                </div>
