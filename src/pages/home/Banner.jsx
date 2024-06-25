@@ -3,7 +3,7 @@ import bannerImg from "./../../assets/banner.png";
 const Banner = () => {
    return (
       <section
-         className="md:h-[440px] h-[260px] bg-cover bg-no-repeat bg-center bg relative"
+         className="lg:h-[440px] md:h-[360px] h-[260px] bg-cover bg-no-repeat bg-center bg relative"
          style={{
             backgroundImage: `url(${bannerImg})`,
          }}

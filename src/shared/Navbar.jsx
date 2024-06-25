@@ -102,13 +102,24 @@ const Navbar = () => {
                </div>
             </div>
             <div className="navbar-end">
-               <div className="flex items-center">
-                  Create account.{" "}
-                  <button onClick={() => setIsCreateModalOpen(true)}>
-                     It`s free!
+               {/* <div className="flex items-center">
+             Create account.{" "}
+             <button onClick={() => setIsCreateModalOpen(true)}>
+               It`s free!
+             </button>{" "}
+             <IoMdArrowDropdown />{" "}
+           </div> */}
+               {/*  */}
+               <div className="flex md:flex-row flex-col items-center">
+                  <h2>Create account.</h2>{" "}
+                  <button
+                     className="flex items-center gap-2"
+                     onClick={() => setIsCreateModalOpen(true)}
+                  >
+                     It's free! <IoMdArrowDropdown />
                   </button>{" "}
-                  <IoMdArrowDropdown />{" "}
                </div>
+               {/*  */}
             </div>
          </div>
 

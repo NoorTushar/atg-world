@@ -4,6 +4,7 @@ import fbIcon from "../../assets/f_logo_RGB-Blue_1024.png";
 import googleIcon from "../../assets/search.png";
 import cancelLogo from "../../assets/baseline-cancel-24px.svg";
 import cancelLogoGrey from "../../assets/cancel-button-gray.svg";
+import { IoCloseSharp } from "react-icons/io5";
 
 const CreateAccountForm = ({
    closeCreateModal,
@@ -13,18 +14,25 @@ const CreateAccountForm = ({
    console.log(isCreateModalOpen);
    return (
       isCreateModalOpen && (
-         <div className="min-h-screen bg-black flex items-end md:items-center justify-center bg-opacity-80 ">
+         <div className="min-h-screen w-full  bg-black   flex items-end md:items-center justify-center bg-opacity-80 fixed z-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
             <div className="bg-white max-w-[750px] w-full  rounded-xl relative">
-               <img
+               {/* <img
+            onClick={closeCreateModal}
+            src={cancelLogoGrey}
+            alt=""
+            fixed  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30
+            className="absolute -right-7 -top-7 hidden md:block
+                  cursor-pointer"
+          /> */}
+               <IoCloseSharp
+                  className="absolute -right-7 bg-white rounded-full  text-2xl font-bold -top-6 hidden md:block
+                  cursor-pointer"
                   onClick={closeCreateModal}
                   src={cancelLogoGrey}
-                  alt=""
-                  className="absolute -right-7 -top-7 hidden md:block
-                  cursor-pointer"
                />
                <p className="bg-[#EFFFF4] text-[#008A45] text-center text-sm font-medium p-4 overflow-hidden rounded-t-lg">
                   Let`s learn, share & inspire each other with our passion for
-                  computer engineering. Sign up now 🤘🏼
+                  computer engineering. Sign up now 🤘🏼￼
                </p>
                <div className="p-5 md:p-10 ">
                   <div className="flex justify-between items-center">
