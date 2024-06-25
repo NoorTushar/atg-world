@@ -1,6 +1,31 @@
+import { useState } from "react";
 import logo from "./../assets/logo.png";
 import { IoMdArrowDropdown } from "react-icons/io";
+import CreateAccountForm from "../components/CreateAccountForm/CreateAccountForm";
+import SignIn from "../components/SignIn/SignIn";
 const Navbar = () => {
+   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
+
+   const openCreateModal = () => {
+      setIsSignInModalOpen(false);
+      setIsCreateModalOpen(true);
+   };
+
+   const closeCreateModal = () => {
+      console.log(`close now`);
+      setIsCreateModalOpen(false);
+   };
+
+   const openSignInModal = () => {
+      setIsCreateModalOpen(false);
+      setIsSignInModalOpen(true);
+   };
+
+   const closeSignInModal = () => {
+      setIsSignInModalOpen(false);
+   };
+
    return (
       <div>
          <div className="navbar bg-base-100 md:px-10 w-full">
@@ -78,11 +103,30 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                <div className="flex items-center">
-                  Create account. <button>It's free!</button>{" "}
+                  Create account.{" "}
+                  <button onClick={() => setIsCreateModalOpen(true)}>
+                     It`s free!
+                  </button>{" "}
                   <IoMdArrowDropdown />{" "}
                </div>
             </div>
          </div>
+
+         {isCreateModalOpen && (
+            <CreateAccountForm
+               isCreateModalOpen={isCreateModalOpen}
+               closeCreateModal={closeCreateModal}
+               openSignInModal={openSignInModal}
+            />
+         )}
+
+         {isSignInModalOpen && (
+            <SignIn
+               isSignInModalOpen={isSignInModalOpen}
+               closeSignInModal={closeSignInModal}
+               openCreateModal={openCreateModal}
+            />
+         )}
       </div>
    );
 };
