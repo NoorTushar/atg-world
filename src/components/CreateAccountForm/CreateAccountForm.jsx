@@ -30,7 +30,7 @@ const CreateAccountForm = ({
                   onClick={closeCreateModal}
                   src={cancelLogoGrey}
                />
-               <p className="bg-[#EFFFF4] text-[#008A45] text-center text-sm font-medium p-4 overflow-hidden rounded-t-lg">
+               <p className="bg-[#EFFFF4] text-[#008A45] text-center text-sm font-medium p-4 overflow-hidden hidden md:block rounded-t-lg">
                   Let`s learn, share & inspire each other with our passion for
                   computer engineering. Sign up now 🤘🏼￼
                </p>
